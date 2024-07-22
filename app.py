@@ -107,3 +107,27 @@ with col2:
     st.image('https://cdn.dribbble.com/userupload/12500996/file/original-b4538fe398a6d7f4e9999ce66ec856ff9.gif',use_column_width=True)
 
 avs.add_vertical_space(10)
+
+col1, col2 = st.columns([2, 3])
+
+with col2:
+  st.markdown("<h1 style='text-align: center;'>FAQ</h1>", unsafe_allow_html=True)
+
+  st.write("Question: How does CareerCraft analyze resumes and job descriptions?")
+  st.write("""Answer: CareerCraft uses advanced algorithms to analyze resumes and job descriptions,
+  identifying key keywords and assessing compatibility between the two.""")
+
+  avs.add_vertical_space(3)
+  st.write("Question: Can CareerCraft suggest improvements for my resume?")
+  st.write("""Answer: Yes, CareerCraft provides personalized recommendations to optimize your resume
+  for specific job openings, including suggestions for missing keywords and alignment with
+  desired job roles.""")
+  
+  avs.add_vertical_space(3)
+  st.write("Question: Is CareerCraft suitable for both entry-level and experienced professionals?")
+  st.write("""Answer: Absolutely! CareerCraft caters to job seekers at all career stages, offering
+  tailored insights and guidance to enhance their resumes and advance their careers.""")
+
+with col1:
+  img3 = Image.open("images/icon3.png")
+  st.image(img3, use_column_width=True)
