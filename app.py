@@ -27,27 +27,28 @@ def input_pdf_text (uploaded_file):
     return text
 
 input_prompt="""
-AS an experienced ATS (Applicant Tracking system), proficient in the technical domain encompassing
-machine learning Engineering, Data science, Data Analysis, Big Data Engineering, web Developer, mobile App
-Developer, DevOps Engineer, Machine Learning Engineer, Cybersecurity Analyst, Cloud Solutions Architect,
-Database Administrator, Network Engineer, AT Eneineer, systems Analyst, Full Stack Developer, UT/UX
-Designer, IT project manager, and additional specialized areas, your OBJECTIVE is to meticulously assess
-resumes against provided job descriptions. 
-Assign precise matching percentages based on the JD
-(Job Description) and meticulously identify any missing keywords with utmost accuracy.
-Create a profile summary for the user on the based on resumes for the job description.
-
-resume : {text}
-description : {jd}
+Hey Act Like a skilled or very experience ATS(Application Tracking System)
+with a deep understanding of tech field,software engineering,data science ,data analyst
+and big data engineer. Your task is to evaluate the resume based on the given job description.
+You must consider the job market is very competitive and you should provide 
+best assistance for improving thr resumes. Assign the percentage Matching based 
+on Jd and
+the missing keywords with high accuracy
+resume:{text}
+description:{jd}
 
 I want the response in the following structure:
 The first line indicates the percentage match with the job description (JD) with respect to the ATS system.
 The second line presents a list of missing keywords that should be in the resume and are fit for the job descriptions.
-The third section provides a profile summary based on the resume.
+The third section provides a profile summary compared to the job description based on the resume
 
 Mention the title for all the three sections.
 While generating the response put some space to separate all the three sections.
+
 """
+
+# Mention the title for all the three sections.
+# While generating the response put some space to separate all the three sections.
 
 #Streamlit UI
 st.set_page_config(page_title="Resume ATS Tracker" ,layout="wide")
@@ -68,7 +69,8 @@ with col1:
                 careercraft today and unlock new opportunities for professional success!
                 </p>""",unsafe_allow_html=True)
 with col2:
-    st.image('https://cdn.dribbble.com/userupload/12500996/file/original-b4538fe398a6d7f4e9999ce66ec856ff9.gif',use_column_width=True)
+    img1= Image.open("images/scan.jpg")
+    st.image(img1,use_column_width=True)
 
 avs.add_vertical_space (10)
 
@@ -84,8 +86,8 @@ with col2:
     st.write( ' Personalized Recommendations')
     st.write( 'Efficient Career Navigation' )
 with coll:
-    # imgl = Image.open("images/iconl.png")
-    st.image('https://cdn.dribbble.com/userupload/12500996/file/original-b4538fe398a6d7f4e9999ce66ec856ff9.gif', use_column_width=True)
+    img2= Image.open("images/opp.jpg")
+    st.image(img2,width=750)
 avs.add_vertical_space(10)
 
 
@@ -103,8 +105,8 @@ with col1:
 
 
 with col2:
-    # img2=Image.open("images/icon2.png")
-    st.image('https://cdn.dribbble.com/userupload/12500996/file/original-b4538fe398a6d7f4e9999ce66ec856ff9.gif',use_column_width=True)
+    img3= Image.open("images/carr.jpg")
+    st.image(img3,use_column_width=True)
 
 avs.add_vertical_space(10)
 
@@ -129,5 +131,5 @@ with col2:
   tailored insights and guidance to enhance their resumes and advance their careers.""")
 
 with col1:
-  img3 = Image.open("images/icon3.png")
-  st.image(img3, use_column_width=True)
+  img4= Image.open("images/faqf.png")
+  st.image(img4,use_column_width=True)
